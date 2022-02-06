@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/', [\App\Http\Controllers\HomeController::class, 'startGame'])->name('startGame');
+Route::get('/game/{id}', [\App\Http\Controllers\TriviaController::class, 'play'])->name('play');
+Route::post('/game/{id}', [\App\Http\Controllers\TriviaController::class, 'submitAnswer'])->name('answer');
+Route::get('/game/{id}/lost', [\App\Http\Controllers\TriviaController::class, 'lose'])->name('lose');
+Route::get('/game/{id}/won', [\App\Http\Controllers\TriviaController::class, 'win'])->name('win');
