@@ -3,8 +3,8 @@
     <div class="mx-5 d-flex justify-content-center">
 
         <div class="mt-8 overflow-hidden shadow" style="width: 40rem;">
-            <div class="card text-center bg-light">
-                <div class="card-header">
+            <div class="card bg-light">
+                <div class="card-header text-center">
 
                     <h2>
                         <span class="badge badge-pill bg-danger">You have lost!</span>
